@@ -1,11 +1,9 @@
-**Matrix Calculator**
-
 **Goals**
 
-Write, compile and test a matrix calculator program
-Review the concept of pointers, and multi-dimensional dynamic arrays
-Create a simple makefile
-Write a robust input validation.
+* Write, compile and test a matrix calculator program
+* Review the concept of pointers, and multi-dimensional dynamic arrays
+* Create a simple makefile
+* Write a robust input validation.
 
 The purpose of this lab is to get familiar with the software environment we will be using this term, and review some C++ concepts to get prepared for future projects and labs. This lab might be very time-consuming since there are a lot of concepts you need to pick up.
 
@@ -43,6 +41,7 @@ The readMatrix() function has two parameters:
 
 * A pointer to a 2D array
 * An integer as the size of the matrix
+
 The function should prompt the user for all the numbers within the matrix, that means for 2x2 matrix, it should ask the user for 4 numbers, and 9 numbers for a 3x3 matrix. Because the function takes a pointer to the 2D array, it should not return anything.
 
 **int determinant():**
@@ -55,16 +54,14 @@ The determinant() function has two parameters:
 The function takes in the 2D array, which contains the value inside the matrix, and calculate the determinant. Afterwards, the function should return the determinant.
 
 **Note** on how to calculate determinant of 2x2 and 3x3 matrices:
-
 https://www.mathsisfun.com/algebra/matrix-determinant.html
 
 **Dynamic Memory**
 
 The program needs to **dynamically** allocate the 2D array in main function, and free the dynamically allocated memory when it is no longer in use. The following link can provide some hint:
-
 http://stackoverflow.com/questions/936687/how-do-i-declare-a-2d-array-in-c-using-new
 
-**The program must use dynamic memory for this lab**. This will help you understand how standard containers work.
+**The program must use dynamic memory for this lab.** This will help you understand how standard containers work.
 
 If memories are allocated but never freed during program runtime, it will cause **memory leak**. We will enforce the memory leak check from this lab to future projects/labs. If you have memory leaks for lab 1, lab 2, and project 1, you will not be penalized for it. From lab 3 and project 2, if you still have memory leaks, TAs will take points off up to 10% of the grade.
 
@@ -91,7 +88,6 @@ To get help on makefile, please watch the lecture videos, check out the make hel
 
 * 5 files for the program
 * makefile
-
 Please put the 6 files into a zip archive. The name of the zip file should follow this format:
 
 *Lab1_LastName_FirstName.zip*
