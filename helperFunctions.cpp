@@ -1,6 +1,7 @@
 #include "helperFunctions.hpp"
 
 using std::string;
+using std::size_t;
 
 
 /*********************************************************************
@@ -12,7 +13,7 @@ using std::string;
 bool validateInput(string inputStr) {
   bool isValid = true;
 
-  for (int i = 0; i < inputStr.length(); i++) {
+  for (size_t i = 0; i < inputStr.length(); i++) {
     if (!isdigit(inputStr[i])) {
       isValid = false;
     }
