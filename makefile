@@ -1,14 +1,20 @@
-lab1: main.o determinant.o readMatrix.o
-	g++ main.o determinant.o readMatrix.o -o lab1
+# Source: http://web.engr.oregonstate.edu/~rookert/cs162/03.mp4
 
-main.o: main.cpp
-	g++ -c main.cpp
+CXX = g++
+CXXFLAGS = -std=c++0x
+CXXFLAGS += -Wall
+CXXFLAGS += -pedantic-errors
+CXXFLAGS += -g
 
-determinant.o: determinant.cpp determinant.hpp
-	g++ -c determinant.cpp
+OBJS = main.o determinant.o helperFunctions.o readMatrix.o
+SRCS = main.cpp determinant.cpp helperFunctions.cpp readMatrix.cpp
+HEADERS = determinant.hpp helperFunctions.hpp readMatrix.hpp
 
-readMatrix.o: readMatrix.cpp readMatrix.hpp
-	g++ -c readMatrix.cpp
+lab1: $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o lab1
+
+$(OBJS): $(SRCS) $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp)
 
 clean:
 	rm *.o lab1
