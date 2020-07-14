@@ -27,5 +27,7 @@
 *.out
 *.app
 
-\.vscode
+.vscode
 .DS_Store
+.idea/
+lab1
