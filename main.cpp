@@ -81,6 +81,12 @@ void deleteMatrix (int** matrix, int size) {
 }
 
 
+/************************************************************************************************
+** Description: This function takes the size selected by the user as an argument, then
+** dynamically creates a 2D array with the number of rows and columns equal to that size. The
+** function then returns a pointer to the 2D array.
+** Source: https://stackoverflow.com/questions/936687/how-do-i-declare-a-2d-array-in-c-using-new
+************************************************************************************************/
 int** makeMatrix(int size) {
   int** newMatrix = new int*[size];
 
@@ -91,6 +97,15 @@ int** makeMatrix(int size) {
   return newMatrix;
 }
 
+
+/*********************************************************************
+** Description: This function accepts a pointer to a 2D array that
+** represents a matrix, and an integer equal to the size of that
+** array. It then prints out each element in the 2D array using an
+** inner for loop to print all values in each row on one line before
+** starting a new line and repeating until all elements have been
+** printed.
+*********************************************************************/
 void printMatrix(int** matrix, int size) {
   for (int j = 0; j < size; j++) {
     cout << "| " ;
